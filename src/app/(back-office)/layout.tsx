@@ -7,7 +7,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
 			<div className="flex">
 				<Sidebar />
 
-				<main className="w-full min-h-screen bg-slate-100">
+				<main className="w-full min-h-screen bg-slate-100 ml-60">
 					<DashboardHeader />
 					{children}
 				</main>
