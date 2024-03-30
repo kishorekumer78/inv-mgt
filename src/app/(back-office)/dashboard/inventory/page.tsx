@@ -1,39 +1,55 @@
 import { FixedHeader } from '@/components/dashboard/FixedHeader';
 import { OptionData, OptionsCard } from '@/components/dashboard/OptionsCard';
-import { Combine, Layers3, ScrollText, Shirt } from 'lucide-react';
+import { FilePenLine, Layers3, PencilRuler, Shirt, Target, Warehouse } from 'lucide-react';
 
 export default function InventoryPage() {
 	const itemCardOptions: OptionData[] = [
 		{
-			title: 'Item Groups',
-			description: 'Create multiple variants of the same item using Item Groups',
-			icon: Layers3,
-			linkTitle: 'New Item Groups',
-			link: '#',
-			enabled: true
-		},
-		{
 			title: 'Items',
-			description: 'Create standalone items and services that you buy and sell',
+			description: 'Create and view items',
+			icon: Layers3,
+			linkTitle: 'View All Items',
+			link: '/dashboard/inventory/items',
+			enabled: true
+		},
+		{
+			title: 'Categories',
+			description: 'Create and view all categories',
 			icon: Shirt,
-			linkTitle: 'New Item',
-			link: '#',
+			linkTitle: 'View All Categories',
+			link: '/dashboard/inventory/categories',
 			enabled: true
 		},
 		{
-			title: 'Composite Items',
-			description: 'Bundle different items together and sell them as kits',
-			icon: Combine,
-			linkTitle: 'New Composite Item',
-			link: '#',
+			title: 'Brands',
+			description: 'Organize items as per brands',
+			icon: Target,
+			linkTitle: 'View Brands',
+			link: '/dashboard/inventory/brands',
 			enabled: true
 		},
 		{
-			title: 'Price List',
-			description: 'Tweak your prices for specific contacts or transactions',
-			icon: ScrollText,
-			linkTitle: 'Set Price',
-			link: '#',
+			title: 'Warehouse',
+			description: 'Manage storage',
+			icon: Warehouse,
+			linkTitle: 'View Warehouse',
+			link: '/dashboard/inventory/warehouse',
+			enabled: true
+		},
+		{
+			title: 'Units',
+			description: 'Manage units for products',
+			icon: PencilRuler,
+			linkTitle: 'View Units',
+			link: '/dashboard/inventory/units',
+			enabled: true
+		},
+		{
+			title: 'Adjustments',
+			description: 'Adjust inventory',
+			icon: FilePenLine,
+			linkTitle: 'Adjust',
+			link: '/dashboard/inventory/adjustments',
 			enabled: true
 		}
 	];
@@ -41,7 +57,7 @@ export default function InventoryPage() {
 		<>
 			<FixedHeader newLink="/dashboard/inventory/items/new" />
 			{/* cards */}
-			<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-12">
+			<div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 p-12">
 				{/* Single card */}
 				{itemCardOptions.map((item, i) => (
 					<OptionsCard key={i} data={item} />

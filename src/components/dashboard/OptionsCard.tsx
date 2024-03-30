@@ -17,10 +17,10 @@ export function OptionsCard({ data }: Props) {
 	const { title, description, linkTitle, link, enabled, icon: Icon } = data;
 	return (
 		<>
-			<div className="shadow-md bg-white flex flex-col items-center gap-3 px-6 py-10 rounded text-center">
+			<div className="shadow-md bg-white flex flex-col items-center gap-2 px-6 py-4 rounded text-center">
 				<h2 className="font-semibold uppercase">{title}</h2>
 
-				<Icon className="w-20 h-20" strokeWidth={'.5px'} />
+				<Icon className="w-12 h-12" strokeWidth={'.5px'} />
 
 				<p className="text-slate-500">{description}</p>
 				{enabled ? (

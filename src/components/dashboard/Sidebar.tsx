@@ -16,9 +16,12 @@ import { SidebarDropdown } from './SidebarDropdown';
 
 export default function Sidebar() {
 	const inventoryLinks = [
-		{ title: 'Items', href: '/dashboard/inventory' },
-		{ title: 'Item Groups', href: '#' },
-		{ title: 'Inventory Adjustments', href: '#' }
+		{ title: 'Items', href: '/dashboard/inventory/items', newLink: true },
+		{ title: 'Categories', href: '/dashboard/inventory/categories', newLink: true },
+		{ title: 'Brands', href: '/dashboard/inventory/brands', newLink: true },
+		{ title: 'Units', href: '/dashboard/inventory/units', newLink: true },
+		{ title: 'Warehouse', href: '/dashboard/inventory/warehouse', newLink: true },
+		{ title: 'Adjustments', href: '/dashboard/inventory/adjustments', newLink: false }
 	];
 	const salesLinks = [
 		{ title: 'Customers', href: '#' },
