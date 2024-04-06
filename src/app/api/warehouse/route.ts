@@ -2,11 +2,15 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
 	try {
-		const data = await request.json();
-		console.log('data', data);
-		return NextResponse.json({ success: true, data: data }, { status: 201 });
+		const { name, location, description, type } = await request.json();
+		const warehouseData = { name, location, description, type };
+		//TODO: create new warehouse
+		return NextResponse.json({ success: true, data: warehouseData }, { status: 201 });
 	} catch (error) {
 		console.log('error', error);
-		return NextResponse.json({ error, message: 'Failed to create new unit' }, { status: 500 });
+		return NextResponse.json(
+			{ error, message: 'Failed to create new warehouse' },
+			{ status: 500 }
+		);
 	}
 }

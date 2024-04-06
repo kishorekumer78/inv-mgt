@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { FormHeader } from '@/components/dashboard/FormHeader';
+import { FormHeader } from '@/components/form/FormHeader';
 import { InputField } from '@/components/form/InputField';
 import { SaveButton } from '@/components/form/SaveButton';
 

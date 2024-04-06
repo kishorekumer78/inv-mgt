@@ -1,7 +1,3 @@
 export default function WarehousePage() {
-	return (
-		<>
-			<div>WarehousePage</div>
-		</>
-	);
+	return <>Warehouse Page</>;
 }

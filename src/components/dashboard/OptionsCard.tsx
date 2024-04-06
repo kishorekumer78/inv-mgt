@@ -22,7 +22,7 @@ export function OptionsCard({ data }: Props) {
 
 				<Icon className="w-12 h-12" strokeWidth={'.5px'} />
 
-				<p className="text-slate-500">{description}</p>
+				<p className="text-slate-500 line-clamp-1 text-sm">{description}</p>
 				{enabled ? (
 					<Link
 						href={link}

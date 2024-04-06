@@ -13,33 +13,9 @@ import {
 import Link from 'next/link';
 import { SubscriptionCard } from '@/components/dashboard/SubscriptionCard';
 import { SidebarDropdown } from './SidebarDropdown';
+import { inventoryLinks, purchaseLinks, salesLinks } from '@/utils/data';
 
 export default function Sidebar() {
-	const inventoryLinks = [
-		{ title: 'Items', href: '/dashboard/inventory/items', newLink: true },
-		{ title: 'Categories', href: '/dashboard/inventory/categories', newLink: true },
-		{ title: 'Brands', href: '/dashboard/inventory/brands', newLink: true },
-		{ title: 'Units', href: '/dashboard/inventory/units', newLink: true },
-		{ title: 'Warehouse', href: '/dashboard/inventory/warehouse', newLink: true },
-		{ title: 'Adjustments', href: '/dashboard/inventory/adjustments', newLink: false }
-	];
-	const salesLinks = [
-		{ title: 'Customers', href: '#' },
-		{ title: 'Sales Orders', href: '#' },
-		{ title: 'Packages', href: '#' },
-		{ title: 'Shipments', href: '#' },
-		{ title: 'Invoices', href: '#' },
-		{ title: 'Sales Receipts', href: '#' },
-		{ title: 'Payments Received', href: '#' },
-		{ title: 'Sales Returns', href: '#' },
-		{ title: 'Credit Notes', href: '#' }
-	];
-	const purchaseLinks = [
-		{ title: 'Items', href: '#' },
-		{ title: 'Item Groups', href: '#' },
-		{ title: 'Inventory Adjustments', href: '#' }
-	];
-
 	return (
 		<div className="fixed">
 			<div className="w-60 min-h-screen bg-slate-800 text-white flex flex-col justify-between">
